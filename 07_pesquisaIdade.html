@@ -31,8 +31,6 @@
         pessoas.push(pessoa);
         totalPessoas--
     } while (totalPessoas > 0);
-
-    console.log(pessoas)
         
     for (pessoa of pessoas) {
         console.log(pessoa)
@@ -49,15 +47,13 @@
     mediaSalarial = mediaSalarial / pessoas.length; 
     maiorIdade = idades.sort((a,b) => b-a)[0];
     menorIdade = idades.sort((a,b) => a-b)[0];
-    
-    console.log(mediaSalarial,qtMulheres, maiorIdade, menorIdade, pessoaMenorSalario); 
-    
+        
 
     //SAÍDA
 
     alert(`
     A média dos salários do grupo: ${mediaSalarial};
-    A maior e a menor idade do grupo ${maiorIdade, menorIdade};
+    A maior e a menor idade do grupo ${maiorIdade}, ${menorIdade};
     A quantidade de mulheres na região ${qtMulheres};
     A idade e o sexo da pessoa que possui o menor salário: ${pessoaMenorSalario.idade}, ${pessoaMenorSalario.sexo === "f" ? "Feminino" : "Masculino"};`);
 

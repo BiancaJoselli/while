@@ -11,7 +11,7 @@
     */
 
     //ENTRADA
-    let nome, idade, salario, sexo, civil;
+    let nome, idade, salario, sexo, civil, erros = [];
     
     
     //PROCESSAMENTO
@@ -30,11 +30,20 @@
         !["s", "c", "v", "d"].includes(civil) && "Estado civil inválido! Use 's', 'c', 'v' ou 'd'."
     ].filter(Boolean);
 
-    alert(erros.join("\n")); 
+    if (erros.length > 0 ) {
+        alert("Erros encontrados: \n" + erros.join("\n")); 
+    }
 
-    } while (erros);
-    
+
+    } while (erros.length > 0);
     
     //SAÍDA
+
+    alert(`
+    Nome: ${nome};
+    Idade: ${idade};
+    Salário: ${salario};
+    Sexo: ${sexo === "f" ? "Feminino" : "Masculino"};
+    Estado Civil: ${civil === "s" ? "Solteiro" : civil === "c" ? "Casado" : civil === "v" ? "Viúvo" : "Divorciado"}`);
 
 </script>
